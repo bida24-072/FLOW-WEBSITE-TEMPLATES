@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — FLOW | Future • Logic • Operations • Worldwide</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="FLOW offers professional website development, mobile applications, and advanced business systems in Botswana.">
+    <meta name="keywords" content="website development Botswana, app development, business systems, IT solutions">
+    <meta name="author" content="FLOW">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Inline theme fallback to ensure consistency with main pages -->
+    <style>
+        /* --- Fallback blue & white theme (matches index.html) --- */
+        :root {
+            --flow-blue: #0a3d62;
+            --flow-blue-light: #1e6a9f;
+            --flow-blue-soft: #e7f0f9;
+            --flow-blue-border: #b8d4e9;
+            --flow-white: #ffffff;
+            --flow-gray-light: #f8fafd;
+            --flow-text-dark: #0b2b4b;
+            --flow-text-muted: #2c4c6e;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--flow-white);
+            color: var(--flow-text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        
+        /* --- Header (consistent with main site) --- */
+        .header {
+            background-color: var(--flow-white);
+            box-shadow: 0 4px 12px rgba(10, 61, 98, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--flow-blue-border);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--flow-blue);
+            line-height: 1.1;
+        }
+        
+        .logo-tagline {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--flow-blue-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--flow-text-dark);
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        
+        .nav-link:hover,
+        .nav-link:focus,
+        .nav-link.active {
+            color: var(--flow-blue-light);
+            border-bottom-color: var(--flow-blue-light);
+            text-decoration: none;
+        }
+        
+        .nav-cta {
+            background-color: var(--flow-blue);
+            color: white !important;
+            padding: 0.75rem 1.75rem;
+            border-radius: 40px;
+            border-bottom: none !important;
+            font-weight: 600;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .nav-cta:hover,
+        .nav-cta:focus {
+            background-color: var(--flow-blue-light);
+            text-decoration: none;
+            border-bottom: none;
+            color: white;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger .bar {
+            width: 26px;
+            height: 3px;
+            background-color: var(--flow-blue);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+        
+        /* --- Page hero --- */
+        .page-hero {
+            background: linear-gradient(145deg, var(--flow-white) 0%, var(--flow-blue-soft) 100%);
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--flow-blue-border);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            background: var(--flow-blue-soft);
+            color: var(--flow-blue);
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 0.35rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--flow-blue-border);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        
+        .page-hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--flow-blue);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            color: var(--flow-blue-light);
+        }
+        
+        .page-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--flow-text-muted);
+            max-width: 650px;
+        }
+        
+        /* --- Services full --- */
+        .services-full {
+            padding: 4rem 0;
+        }
+        
+        .service-detail {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--flow-blue-border);
+        }
+        
+        .service-detail:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        
+        .service-detail-grid.reverse {
+            grid-template-columns: 1fr 100px;
+        }
+        
+        .service-detail-icon {
+            background: var(--flow-blue-soft);
+            width: 90px;
+            height: 90px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--flow-blue);
+            border: 1px solid var(--flow-blue-border);
+        }
+        
+        .service-detail-content {
+            max-width: 750px;
+        }
+        
+        .service-detail-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--flow-blue-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-detail-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--flow-blue);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .service-detail-description {
+            font-size: 1.1rem;
+            color: var(--flow-text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 650px;
+        }
+        
+        .service-detail-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .service-detail-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.98rem;
+            color: var(--flow-text-dark);
+        }
+        
+        .service-detail-list li i {
+            color: var(--flow-blue-light);
+            font-size: 1rem;
+            width: 1.1rem;
+            flex-shrink: 0;
+        }
+        
+        .service-detail-pricing {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding: 0.9rem 1.5rem;
+            background: var(--flow-blue-soft);
+            border-radius: 16px;
+            border: 1px solid var(--flow-blue-border);
+            width: fit-content;
+        }
+        
+        .price-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--flow-text-muted);
+        }
+        
+        .price-amount {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--flow-blue);
+        }
+        
+        /* --- Buttons (consistent) --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background-color: var(--flow-blue);
+            color: white;
+            padding: 0.9rem 2.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            border: 2px solid var(--flow-blue);
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+        
+        .btn:hover,
+        .btn:focus {
+            background-color: var(--flow-blue-light);
+            border-color: var(--flow-blue-light);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        
+        .btn-primary {
+            background-color: var(--flow-blue);
+            color: white;
+            border-color: var(--flow-blue);
+        }
+        
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: var(--flow-blue-light);
+            border-color: var(--flow-blue-light);
+            color: white;
+        }
+        
+        .btn-large {
+            padding: 1rem 2.8rem;
+            font-size: 1.1rem;
+        }
+        
+        /* --- Why choose section --- */
+        .why-choose {
+            background: var(--flow-blue-soft);
+            padding: 4rem 0;
+            border-top: 1px solid var(--flow-blue-border);
+            border-bottom: 1px solid var(--flow-blue-border);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--flow-blue);
+        }
+        
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .wc-item {
+            background: var(--flow-white);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--flow-blue-border);
+            box-shadow: 0 6px 14px rgba(10, 61, 98, 0.04);
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+        
+        .wc-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px -10px rgba(10, 61, 98, 0.12);
+        }
+        
+        .wc-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--flow-blue-light);
+            opacity: 0.3;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .wc-item h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--flow-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .wc-item p {
+            font-size: 0.95rem;
+            color: var(--flow-text-muted);
+            margin-bottom: 0;
+        }
+        
+        /* --- CTA section --- */
+        .cta-section {
+            padding: 4rem 0 3rem;
+        }
+        
+        .cta-content {
+            background: var(--flow-blue);
+            border-radius: 40px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-title .highlight {
+            color: var(--flow-blue-soft);
+        }
+        
+        .cta-description {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 550px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--flow-blue);
+            border-color: white;
+        }
+        
+        .cta-section .btn-primary:hover,
+        .cta-section .btn-primary:focus {
+            background: var(--flow-blue-soft);
+            border-color: var(--flow-blue-soft);
+            color: var(--flow-blue);
+        }
+        
+        /* --- Footer (consistent) --- */
+        .footer {
+            background: var(--flow-white);
+            border-top: 1px solid var(--flow-blue-border);
+            padding: 3rem 0 2rem;
+            margin-top: 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2.5rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--flow-blue);
+            line-height: 1.1;
+        }
+        
+        .footer-logo .logo-tagline {
+            font-size: 0.6rem;
+            font-weight: 500;
+            color: var(--flow-blue-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .footer-description {
+            color: var(--flow-text-muted);
+            font-size: 0.95rem;
+            max-width: 280px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+        }
+        
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--flow-blue-soft);
+            color: var(--flow-blue);
+            border: 1px solid var(--flow-blue-border);
+            transition: background 0.2s, color 0.2s;
+            text-decoration: none;
+        }
+        
+        .footer-social a:hover,
+        .footer-social a:focus {
+            background: var(--flow-blue);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links h4,
+        .footer-contact h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--flow-blue);
+            margin-bottom: 1.25rem;
+        }
+        
+        .footer-links ul,
+        .footer-contact ul {
+            list-style: none;
+        }
+        
+        .footer-links li,
+        .footer-contact li {
+            margin-bottom: 0.7rem;
+        }
+        
+        .footer-links a,
+        .footer-contact a {
+            color: var(--flow-text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover,
+        .footer-links a:focus,
+        .footer-contact a:hover,
+        .footer-contact a:focus {
+            color: var(--flow-blue-light);
+            text-decoration: underline;
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            color: var(--flow-text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .footer-contact li i {
+            color: var(--flow-blue-light);
+            margin-top: 0.25rem;
+            width: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .footer-contact li span {
+            color: var(--flow-text-muted);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--flow-blue-border);
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--flow-text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-bottom-links a {
+            color: var(--flow-text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom-links a:hover,
+        .footer-bottom-links a:focus {
+            color: var(--flow-blue-light);
+            text-decoration: underline;
+        }
+        
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .page-hero-title {
+                font-size: 2.4rem;
+            }
+            .service-detail-grid,
+            .service-detail-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .service-detail-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+            .service-detail-list {
+                grid-template-columns: 1fr;
+            }
+            .service-detail-title {
+                font-size: 1.8rem;
+            }
+            
+            /* Mobile navigation */
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1.5rem 0 0.5rem;
+                border-top: 1px solid var(--flow-blue-border);
+                margin-top: 1rem;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-cta {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom-links {
+                justify-content: center;
+            }
+            .cta-content {
+                padding: 2.5rem 1.5rem;
+                border-radius: 24px;
+            }
+            .cta-title {
+                font-size: 1.9rem;
+            }
+            .service-detail-pricing {
+                width: 100%;
+            }
+            .price-amount {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .page-hero-title {
+                font-size: 2rem;
+            }
+            .page-hero-subtitle {
+                font-size: 1rem;
+            }
+            .service-detail-title {
+                font-size: 1.5rem;
+            }
+            .btn {
+                padding: 0.8rem 1.6rem;
+                font-size: 0.95rem;
+            }
+            .btn-large {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 1rem;
+            background: var(--flow-blue);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 8px;
+            font-weight: 600;
+            z-index: 999;
+            transition: top 0.15s;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        :focus-visible {
+            outline: 3px solid var(--flow-blue-light);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip navigation for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ============================================ -->
+    <!-- HEADER (consistent with main site)           -->
+    <!-- ============================================ -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="FLOW Home">
+                        <span class="logo-text">FLOW</span>
+                        <span class="logo-tagline">Future • Logic • Operations • Worldwide</span>
+                    </a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="showcase.html" class="nav-link">Our Work</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary nav-cta">
+                            <i class="fas fa-paper-plane"></i> Get a Quote
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger" aria-label="Toggle Menu" role="button" tabindex="0">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- ============================================ -->
+        <!-- PAGE HERO                                    -->
+        <!-- ============================================ -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <span class="section-tag">What We Build</span>
+                    <h1 class="page-hero-title">Our <span class="highlight">Services</span></h1>
+                    <p class="page-hero-subtitle">
+                        We deliver complete technology solutions tailored to your business needs.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SERVICES LIST                                -->
+        <!-- ============================================ -->
+        <section class="services-full">
+            <div class="container">
+                
+                <!-- Service 1: Websites -->
+                <div class="service-detail" id="websites">
+                    <div class="service-detail-grid">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="service-detail-content">
+                            <span class="service-detail-tag">Service</span>
+                            <h2 class="service-detail-title">Professional <span class="highlight">Website Development</span></h2>
+                            <p class="service-detail-description">
+                                We build stunning, fast, and mobile-friendly websites that represent your brand 
+                                and drive results. From simple landing pages to complex e-commerce stores.
+                            </p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check-circle"></i> Custom Websites from Scratch</li>
+                                <li><i class="fas fa-check-circle"></i> WordPress Development</li>
+                                <li><i class="fas fa-check-circle"></i> E-Commerce Stores (WooCommerce, Shopify)</li>
+                                <li><i class="fas fa-check-circle"></i> Figma / Design to Web Conversion</li>
+                                <li><i class="fas fa-check-circle"></i> Payment Gateway Integration</li>
+                                <li><i class="fas fa-check-circle"></i> WhatsApp, Forms &amp; Maps Integration</li>
+                                <li><i class="fas fa-check-circle"></i> SEO Optimization</li>
+                                <li><i class="fas fa-check-circle"></i> Hosting &amp; Domain Management</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Starting from</span>
+                                <span class="price-amount">P5,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Get a Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Applications -->
+                <div class="service-detail" id="applications">
+                    <div class="service-detail-grid reverse">
+                        <div class="service-detail-content">
+                            <span class="service-detail-tag">Service</span>
+                            <h2 class="service-detail-title">Custom <span class="highlight">Application Development</span></h2>
+                            <p class="service-detail-description">
+                                We develop powerful mobile and web applications that solve business problems, 
+                                engage users, and streamline operations.
+                            </p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check-circle"></i> Android App Development</li>
+                                <li><i class="fas fa-check-circle"></i> iOS App Development</li>
+                                <li><i class="fas fa-check-circle"></i> Cross-Platform Apps (React Native / Flutter)</li>
+                                <li><i class="fas fa-check-circle"></i> Backend Development &amp; APIs</li>
+                                <li><i class="fas fa-check-circle"></i> Database Design &amp; Management</li>
+                                <li><i class="fas fa-check-circle"></i> User Authentication &amp; Security</li>
+                                <li><i class="fas fa-check-circle"></i> Push Notifications</li>
+                                <li><i class="fas fa-check-circle"></i> Third-Party Integrations</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Starting from</span>
+                                <span class="price-amount">P15,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Get a Quote
+                            </a>
+                        </div>
+                        <div class="service-detail-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Business Systems -->
+                <div class="service-detail" id="systems">
+                    <div class="service-detail-grid">
+                        <div class="service-detail-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="service-detail-content">
+                            <span class="service-detail-tag">Service</span>
+                            <h2 class="service-detail-title">Advanced <span class="highlight">Business Systems</span></h2>
+                            <p class="service-detail-description">
+                                Streamline your operations with custom business systems designed for efficiency, 
+                                data management, and growth.
+                            </p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check-circle"></i> Booking &amp; Reservation Systems</li>
+                                <li><i class="fas fa-check-circle"></i> Point of Sale (POS) Systems</li>
+                                <li><i class="fas fa-check-circle"></i> School Management Systems</li>
+                                <li><i class="fas fa-check-circle"></i> Inventory Management Systems</li>
+                                <li><i class="fas fa-check-circle"></i> Business Dashboards &amp; Analytics</li>
+                                <li><i class="fas fa-check-circle"></i> Customer Portals</li>
+                                <li><i class="fas fa-check-circle"></i> AI &amp; Machine Learning Integrations</li>
+                                <li><i class="fas fa-check-circle"></i> Cloud Services &amp; Deployment</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Starting from</span>
+                                <span class="price-amount">P25,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Get a Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Support & Maintenance -->
+                <div class="service-detail" id="support">
+                    <div class="service-detail-grid reverse">
+                        <div class="service-detail-content">
+                            <span class="service-detail-tag">Service</span>
+                            <h2 class="service-detail-title">Support &amp; <span class="highlight">Maintenance</span></h2>
+                            <p class="service-detail-description">
+                                Keep your technology running smoothly with our ongoing support and maintenance packages.
+                            </p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check-circle"></i> Website &amp; App Updates</li>
+                                <li><i class="fas fa-check-circle"></i> Automated Backups</li>
+                                <li><i class="fas fa-check-circle"></i> Security Monitoring &amp; Patching</li>
+                                <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                                <li><i class="fas fa-check-circle"></i> Technical Support</li>
+                                <li><i class="fas fa-check-circle"></i> Analytics &amp; Reporting</li>
+                                <li><i class="fas fa-check-circle"></i> SEO Monitoring</li>
+                                <li><i class="fas fa-check-circle"></i> Uptime Guarantee</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Starting from</span>
+                                <span class="price-amount">P1,500 / month</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Get a Quote
+                            </a>
+                        </div>
+                        <div class="service-detail-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- WHY CHOOSE US                                -->
+        <!-- ============================================ -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Why Choose Us</span>
+                    <h2 class="section-title">What Makes <span class="highlight">FLOW</span> Different</h2>
+                </div>
+
+                <div class="why-choose-grid">
+                    <div class="wc-item">
+                        <div class="wc-number">01</div>
+                        <h4>Transparent Pricing</h4>
+                        <p>No hidden fees. We provide clear quotes with detailed scope of work.</p>
+                    </div>
+                    <div class="wc-item">
+                        <div class="wc-number">02</div>
+                        <h4>Quality Guarantee</h4>
+                        <p>We test thoroughly and deliver clean, working code that meets your requirements.</p>
+                    </div>
+                    <div class="wc-item">
+                        <div class="wc-number">03</div>
+                        <h4>On-Time Delivery</h4>
+                        <p>We respect deadlines and keep you informed throughout the development process.</p>
+                    </div>
+                    <div class="wc-item">
+                        <div class="wc-number">04</div>
+                        <h4>Post-Launch Support</h4>
+                        <p>We stand by our work with dedicated support after launch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- CTA SECTION                                  -->
+        <!-- ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Get <span class="highlight">Started</span>?</h2>
+                    <p class="cta-description">
+                        Contact us today for a free consultation and quote.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER (consistent with main site)           -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">FLOW</span>
+                        <span class="logo-tagline">Future • Logic • Operations • Worldwide</span>
+                    </div>
+                    <p class="footer-description">
+                        Moving Business Forward. We provide professional websites, 
+                        applications, and business systems to help companies grow.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="showcase.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#websites">Website Development</a></li>
+                        <li><a href="services.html#applications">App Development</a></li>
+                        <li><a href="services.html#systems">Business Systems</a></li>
+                        <li><a href="services.html#support">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:f.l.o.w.bw2026@gmail.com">f.l.o.w.bw2026@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+26777777749">+267 77 777 749</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+26772706831">+267 72 706 831</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Gaborone, Botswana</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/26777777749">Chat on WhatsApp</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/26772706831">Chat on WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FLOW - Future • Logic • Operations • Worldwide. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                      -->
+    <!-- ============================================ -->
+    <script>
+        // Mobile navigation toggle (consistent with main site)
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    const isActive = navMenu.classList.toggle('active');
+                    hamburger.setAttribute('aria-expanded', isActive);
+                });
+                
+                // Close menu when a link is clicked
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                        navMenu.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
